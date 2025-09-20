@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu primeiro HTML</title> <!--Esse título não aparece no site final-->
+</head>
+<body>
+    <nav id="topo">
+        <a href="#formatacao">Formatação</a> | <a href="#listas">Listas</a> | <a href="#midias">Midias</a> | <a href="#tabelas">Tabelas</a> <!--Onde vou colocar os meus pontos de ancoragem para direcionar a pontos do texto. ID é o ponto de referência-->
+    </nav>
+    <section id="formatacao">
+        <header>
+            <h1>Formatação em HTML</h1>
+        </header>
+        <h1>Titulo 1</h1>
+        <p>
+            Lorem, &nbsp; ipsum dolor, sit amet consectetur adipisicing elit. Tempore accusantium voluptas molestias nobis consequatur corrupti repudiandae. Animi laudantium voluptatibus eligendi magnam dolor itaque, doloribus reiciendis neque, natus omnis, aperiam sed.
+        </p>
+        <p>Segundo parágrafo.</p>
+        <p><b>Texto em negrito</b></p>
+        <p><strong>Texto em negrito também</strong></p> <!--Nomenclatura mais nova-->
+        <p><i>Texto em itálico</i></p>
+        <p><strike>Texto tachado</strike></p>
+        <p><u>Texto sublinhado</u></p>
+        <p><ins>Texto sublinhado também</ins></p>
+        <p><em>Texto em itálico também</em></p> <!--Nomenclatura mais nova-->
+        <p><mark>Texto marcado com marca texto</mark></p>
+    </section>
+    <section id="listas">
+        <header><h2>Listas ordenadas e não ordenadas</h2></header> <!--O h1, h2 se referem aos título-->
+        <section id="lista-ordenada">
+            <header>Listas ordenadas</header>
+            <ol type="a"> <!--Sem o type, ele vai listar por números. Com o type, dá pra selecionar a ordenação: A B C, I II III, 1 2 3, e assim em diante-->
+                <li>Primeiro Item</li>
+                <li>Segundo Item</li>
+                <h3>Iniciando a lista com um valor específico</h3>
+                <ol start="5" type="1"> <!--OL é lista ordenada-->
+                    <li>Item 5</li>
+                    <li>Item 6</li>
+                </ol>
+            </ol>
+        </section>
+        <section id="lista nao-ordenada">
+            <header><h4>Lista não-ordenada</h4></header>
+            <ul>
+                <li>Primeiro Item</li>
+                <li>Segundo Item</li>
+                <li>Terceiro Item</li>
+                <ul>
+                    <li>Dentro do Item 1</li> <!--Alt + Shift + Seta para baixo copia a linha de cima-->
+                    <li>Dentro do Item 2</li>
+                </ul>
+            </ul>
+            <a href="#formatacao">Ir para o topo</a> <!--Serve para ancorar um hiperlink-->
+        </section>
+    </section>
+    <section id="midias">
+        <header><h4>Imagens</h4></header>
+        <figure>
+            <img src="https://sp.senai.br/images/senai.svg" alt="Logotipo do Senai">
+            <figcaption>Imagem do Senai - Fonte: Site do Senai Bauru</figcaption>
+        </figure>
+        <section id="videos">
+            <header><h4>Videos</h4></header>
+            <video controls> <!--Habilita o controle do vídeo-->
+                <source src="https://github.com/richard-brosler-senai/java-tools/raw/refs/heads/master/apoios/Java%20Foundations/Midias/video.mp4">
+            </video>
+        </section>
+        <section id="audios">
+            <header><h4>Audios</h4></header>
+            <audio controls>
+                <source src="https://github.com/richard-brosler-senai/java-tools/raw/refs/heads/master/apoios/Java%20Foundations/Midias/video.mp4">
+            </audio>
+        </section>
+    </section>
+    <section id="tabelas">
+        <header><h4>Tabelas</h4></header>
+        <table border="1">
+            <thead>
+                <tr> <!--Início de uma linha na tabela-->
+                    <th>Sequência</th>
+                    <th>Descrição</th>
+                    <th>Valor</th>
+                </tr>
+            </thead>
+            <tbody> <!--Corpo da tabela-->
+                <tr>
+                    <td>1</td> <!--TD coluna e TR linha-->
+                    <td>Lapiseiras</td>
+                    <td>R$15,00</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Canetas</td>
+                    <td>R$10,00</td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td colspan="2">Total</td>
+                    <td>R$25,00</td>
+                </tr>
+            </tfoot>
+        </table>
+    </section>
+    <section id="formularios">
+        <header><h4>Formulários</h4></header>
+        <form action="#" method="get"> <!--Pecisa mudar para post, mas vai dar erro-->
+            <label for="nome">Nome</label>
+            <input type="text" name="nome" id="nome">
+
+            <label for="telefone">Telefone</label>
+            <input type="tel" name="telefone" id="telefone">
+
+            <input type="submit" value="Enviar">
+        </form> <!--No action: Poderia colocar um banco dados para direcionar as respostas. No GET: Não posso usar para dados sensíveis. Post: pode ser usado para dados sensíveis-->
+    </section>
+</body>
+</html>
