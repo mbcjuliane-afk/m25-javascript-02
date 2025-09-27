@@ -3,6 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        nav{
+            background-color: rgb(175, 233, 233);
+        }
+        /* Selecionando a tag ID = videos e dentro a tag videos*/
+        #videos video{
+            width: 300px;
+        }
+        /*Selecionando por classe*/
+        .cor-cinza {
+            color: lightslategray;
+        }
+    </style>
     <title>Meu primeiro HTML</title> <!--Esse título não aparece no site final-->
 </head>
 <body>
@@ -56,7 +69,7 @@
         </section>
     </section>
     <section id="midias">
-        <header><h4>Imagens</h4></header>
+        <header><h4 class="cor-cinza">Imagens</h4></header>
         <figure>
             <img src="https://sp.senai.br/images/senai.svg" alt="Logotipo do Senai">
             <figcaption>Imagem do Senai - Fonte: Site do Senai Bauru</figcaption>
@@ -116,5 +129,40 @@
             <input type="submit" value="Enviar">
         </form> <!--No action: Poderia colocar um banco dados para direcionar as respostas. No GET: Não posso usar para dados sensíveis. Post: pode ser usado para dados sensíveis-->
     </section>
+    <section id="iframes">
+        <iframe src="https://youtu.be/PRe0dAO1AK0?si=quSDUVdP1qVTxTdn"></iframe>
+    </section>
+    <section id="desenho">
+        <svg width="100" height="100">
+        <circle cx="50" cy="50" r="40" stroke="black" fill="red" />
+        </svg>
+        <section id="outras-tags">
+            <progress value="70" max="100"></progress>
+            <meter value="0.6">60%</meter>
+            <time datetime="2025-09-20">20 de Setembro de 2025</time>
+            <!-- Usada para mostrar um código em uma programação -->
+            <code>
+                //teste de comentário
+                console.log("Olá");
+            </code>
+            <!-- Usado para mostrar um texto da forma que estiver escrito, com quebras de linhas, espaços, tabulações -->
+            <pre>
+            for i in range(5):
+            print(i)
+            </pre>
+        </section>
+        <aside>
+            <h3>
+                Conteúdo a parte
+            </h3>
+        </aside>
+        <footer>
+            Linkedin: <a href="link para o linkedin">Texto a exibir</a> xxxxxx | Facebook: <a href="link para o facebook">Texto a exibir</a>xxxxxxx | Whatsapp: 12 34567897
+        </footer>
+    </section>
+    <!-- Java Script sempre ficará no final do documento-->
+     <script>
+     alert("Olá pessoal!");
+     </script>
 </body>
 </html>
