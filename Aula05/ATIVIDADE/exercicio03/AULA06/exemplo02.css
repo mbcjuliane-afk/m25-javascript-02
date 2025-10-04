@@ -1,0 +1,119 @@
+* {
+    font-family: Arial, Helvetica, sans-serif;
+}
+header h2 {
+    color: rgb(97, 184, 155);
+}
+nav {
+    display: flex;
+    /* Deixa ajustado - melhora o encaixe - responsivo */
+}
+nav ul {
+    list-style-type: none; 
+    /* Serve para tirar o ícone de um menu ordenado (bolinha de marcador) */
+    margin: 0;
+    padding: 0;
+}
+nav ul li {
+    float: left;
+}
+nav ul li a {
+    display: block;
+    color: rgb(58, 102, 95);
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    background-color: rgb(200, 236, 233);
+    font-weight: bold;
+}
+/* Seletor de pseudo class - hover */
+nav ul li a:hover {
+    background-color: cadetblue;
+}
+/* Seletor por ID */
+#uso-tabela {
+    background-color: rgb(204, 230, 231);
+}
+/* Seletor do filho imediato do ID uso-tabela */
+#uso-tabela > h3 {
+    color: rgb(33, 85, 74);
+}
+/* Estilizando a tabela */
+#uso-tabela table thead tr {
+    background-color: rgb(73, 138, 132);
+    color: aliceblue;
+}
+/* Usando mais uma pseudo class para estilizar */
+/* Linhas Ímpares */
+#uso-tabela table tbody tr:nth-child(odd) {
+    background-color: rgb(220, 243, 238);
+}
+/* Linhas Pares */
+#uso-tabela table tbody tr:nth-child(even) {
+    background-color: white;
+}
+
+#uso-tabela table tbody tr:hover {
+    background-color: darkgray;
+}
+/* Uso da pseudo class active */
+#uso-formulario form input:focus {
+    background-color: mistyrose;
+    /* No forms, quando clica na barra de preenchimento, muda de cor */
+}
+/* Selecionando mais de um elemento para aplicar um estilo comum */
+th, td { /* Selecionando todos os th e todos os td */
+    font-family: 'Courier New', Courier, monospace;
+}
+/* Selecionando irmãos posteriores */
+h3 ~ p {
+    color: rgb(138, 97, 175);
+}
+/* Selecionando Irmãos imediatos */
+h3 + p {
+    color: rgb(168, 70, 87);
+}
+p {
+    color: rgb(61, 50, 221) !important; /* Força a aplicar - Não recomendado */
+}
+/* Iniciando as classes para o menu */
+.menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.menu li {
+    display: inline-block;
+    position: relative;
+}
+.menu li a {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    color: mediumslateblue;
+}
+.submenu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #f9f9f9;
+    box-sizing: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+.submenu li {
+    display: block;
+    width: 150px;
+}
+.tem-submenu:hover .submenu {
+    display: block;
+}
+.menu li a:hover {
+    background-color: #ddd;
+}
+/* Uso de seletor por atributo */
+p[data-detalhe] {
+    text-decoration: underline;
+}
+p[data-detalhe="linha3"] {
+    background-color: aqua;
+}
